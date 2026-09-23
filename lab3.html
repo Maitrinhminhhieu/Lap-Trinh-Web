@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Thực Hành Ngôn Ngữ HTML (Phần 2/2)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px 40px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        h1 {
+            color: #0d47a1;
+            text-align: center;
+            border-bottom: 2px solid #0d47a1;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #1565c0;
+            margin-top: 30px;
+            background-color: #f0f4f8;
+            padding: 8px 12px;
+            border-left: 5px solid #1565c0;
+        }
+
+        h3 {
+            color: #2e7d32;
+            margin-top: 15px;
+        }
+
+        .nav-menu {
+            background-color: #e3f2fd;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border: 1px solid #bbdefb;
+        }
+
+        .nav-menu ul {
+            margin: 5px 0;
+            padding-left: 25px;
+        }
+
+        .nav-menu a {
+            color: #0d47a1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .section-box {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .desc {
+            color: #555;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .required {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Styling cho table Form */
+        .form-table {
+            border-collapse: separate;
+            border-spacing: 6px;
+        }
+
+        .form-table td {
+            vertical-align: top;
+            padding: 4px;
+        }
+
+        .form-table .label-col {
+            text-align: right;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* Nút bấm */
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"],
+        button {
+            padding: 5px 14px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+
+        /* Bảng mẫu BangBieu5 */
+        .table-bangbieu5 {
+            background-color: blue;
+            color: white;
+            border-collapse: separate;
+        }
+
+        .table-bangbieu5 td {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border: 8px solid #333;
+        }
+
+        .table-bangbieu5 .cell-c {
+            background-color: red;
+        }
+
+        .notice-red {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>LAB 3: THỰC HÀNH NGÔN NGỮ HTML (PHẦN 2/2)</h1>
+
+    <!-- MỤC LỤC ĐIỀU HƯỚNG -->
+    <div class="nav-menu">
+        <strong>MỤC LỤC BÀI TẬP:</strong>
+        <table width="100%">
+            <tr>
+                <td valign="top" width="50%">
+                    <h4>I. CÁC BÀI TẬP BẢNG BIỂU (TABLE)</h4>
+                    <ul>
+                        <li><a href="#bai10">Bài 10: BangBieu1 (Border 1px)</a></li>
+                        <li><a href="#bai11">Bài 11: BangBieu2 (Border 8px, Cellspacing 3px, Cellpadding 15px)</a></li>
+                        <li><a href="#bai12a">Bài 12a: BangBieu3 (Width 400px, Height 600px)</a></li>
+                        <li><a href="#bai12b">Bài 12b: BangBieu4 (Kích thước từng hàng & cột)</a></li>
+                        <li><a href="#bai14">Bài 14: BangBieu5 (Màu nền bảng xanh, ô C đỏ)</a></li>
+                    </ul>
+                </td>
+                <td valign="top" width="50%">
+                    <h4>II. CÁC BÀI TẬP MẪU BIỂU (FORM)</h4>
+                    <ul>
+                        <li><a href="#form1">Bài tập 1: Trang Đăng nhập (Login.html)</a></li>
+                        <li><a href="#form2">Bài tập 2: Trang Đóng góp ý kiến (Gopy.html)</a></li>
+                        <li><a href="#form3">Bài tập 3: Trang Đăng ký tài khoản (Dangkytaikhoan.html)</a></li>
+                        <li><a href="#form4">Bài tập 4: Trang Phiếu thăm dò ý kiến (Thamdoykien.html)</a></li>
+                        <li><a href="#form5">Bài tập 5: Phiếu đăng ký thành viên (dangky.html)</a></li>
+                        <li><a href="#form6">Bài tập 6: Đăng ký mua hoa (dangky-muahoa.html)</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 1: CÁC BÀI TẬP BẢNG BIỂU               -->
+    <!-- ========================================== -->
+
+    <!-- BÀI 10 -->
+    <div class="section-box" id="bai10">
+        <h2>BÀI 10: BANGBIEU1.HTML</h2>
+        <p class="desc">Yêu cầu: Xuất ra bảng 2 dòng 3 cột có độ dày đường biên là 1 pixel (border="1").</p>
+        <table border="1">
+            <tr>
+                <td align="center" width="80" height="40">A</td>
+                <td align="center" width="80" height="40">B</td>
+                <td align="center" width="80" height="40">C</td>
+            </tr>
+            <tr>
+                <td align="center" width="80" height="40">D</td>
+                <td align="center" width="80" height="40">E</td>
+                <td align="center" width="80" height="40">F</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- BÀI 11 -->
+    <div class="section-box" id="bai11">
+        <h2>BÀI 11: BANGBIEU2.HTML</h2>
+        <p class="desc">Yêu cầu: Độ dày biên là 8px, khoảng cách giữa các ô là 3px, khoảng cách từ biên ô đến nội dung ô là 15px (border="8" cellspacing="3" cellpadding="15").</p>
+        <table border="8" cellspacing="3" cellpadding="15">
+            <tr>
+                <td align="center">A</td>
+                <td align="center">B</td>
+                <td align="center">C</td>
+            </tr>
+            <tr>
+                <td align="center">D</td>
+                <td align="center">E</td>
+                <td align="center">F</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- BÀI 12a -->
+    <div class="section-box" id="bai12a">
+        <h2>BÀI 12a: BANGBIEU3.HTML</h2>
+        <p class="desc">Yêu cầu: Kế thừa BangBieu2, thêm độ rộng bảng là 400px, độ cao của bảng là 600px (width="400" height="600").</p>
+        <table border="8" cellspacing="3" cellpadding="15" width="400" height="600">
+            <tr>
+                <td align="center">A</td>
+                <td align="center">B</td>
+                <td align="center">C</td>
+            </tr>
+            <tr>
+                <td align="center">D</td>
+                <td align="center">E</td>
+                <td align="center">F</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- BÀI 12b -->
+    <div class="section-box" id="bai12b">
+        <h2>BÀI 12b: BANGBIEU4.HTML</h2>
+        <p class="desc">Yêu cầu: Kế thừa BangBieu3. Xác định độ rộng cột 1 là 100px, cột 2 là 120px, cột 3 là 180px; Chiều cao dòng 1 là 200px, dòng 2 là 400px.</p>
+        <table border="8" cellspacing="3" cellpadding="15" width="400" height="600">
+            <tr height="200">
+                <td width="100" align="center">A</td>
+                <td width="120" align="center">B</td>
+                <td width="180" align="center">C</td>
+            </tr>
+            <tr height="400">
+                <td width="100" align="center">D</td>
+                <td width="120" align="center">E</td>
+                <td width="180" align="center">F</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- BÀI 14 -->
+    <div class="section-box" id="bai14">
+        <h2>BÀI 14: BANGBIEU5.HTML</h2>
+        <p class="desc">Yêu cầu: Kế thừa BangBieu4. Màu nền cho cả bảng là màu xanh (blue), màu nền cho ô C là màu đỏ (red).</p>
+        <table border="8" cellspacing="3" cellpadding="15" width="400" height="600" bgcolor="blue" class="table-bangbieu5">
+            <tr height="200">
+                <td width="100">A</td>
+                <td width="120">B</td>
+                <td width="180" bgcolor="red" class="cell-c">C</td>
+            </tr>
+            <tr height="400">
+                <td width="100">D</td>
+                <td width="120">E</td>
+                <td width="180">F</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 2: CÁC BÀI TẬP MẪU BIỂU (FORM)         -->
+    <!-- ========================================== -->
+
+    <!-- BÀI TẬP 1: LOGIN -->
+    <div class="section-box" id="form1">
+        <h2>BÀI TẬP 1: TRANG LOGIN.HTML</h2>
+        <h3>ĐĂNG NHẬP</h3>
+        <form action="" method="post">
+            <table class="form-table">
+                <tr>
+                    <td class="label-col">Tên đăng nhập:</td>
+                    <td>
+                        <input type="text" name="username" size="25" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Mật khẩu:</td>
+                    <td>
+                        <input type="password" name="password" size="25" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="reset" value="Cancel">
+                        <input type="submit" value="Login">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- BÀI TẬP 2: GOPY -->
+    <div class="section-box" id="form2">
+        <h2>BÀI TẬP 2: TRANG GOPY.HTML</h2>
+        <h3>ĐÓNG GÓP Ý KIẾN</h3>
+        <form action="" method="post">
+            <table class="form-table">
+                <tr>
+                    <td class="label-col">Họ và tên:</td>
+                    <td>
+                        <input type="text" name="fullname" size="35" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Nội dung góp ý:</td>
+                    <td>
+                        <textarea name="noidung" rows="6" cols="40" required placeholder="Nhập ý kiến đóng góp của bạn tại đây..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Gửi góp ý">
+                        <input type="reset" value="Cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- BÀI TẬP 3: DANGKYTAIKHOAN -->
+    <div class="section-box" id="form3">
+        <h2>BÀI TẬP 3: TRANG DANGKYTAIKHOAN.HTML</h2>
+        <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+        <form action="" method="post">
+            <table class="form-table">
+                <tr>
+                    <td class="label-col">Username:</td>
+                    <td>
+                        <input type="text" name="username" placeholder="Nhập username" size="30" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Mật khẩu:</td>
+                    <td>
+                        <input type="password" name="password" placeholder="Nhập mật khẩu" size="30" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Địa chỉ email:</td>
+                    <td>
+                        <input type="email" name="email" placeholder="Nhập địa chỉ email" size="30" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Ngày sinh:</td>
+                    <td>
+                        <input type="date" name="ngaysinh" placeholder="Mm/dd/yyyy">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Giới tính:</td>
+                    <td>
+                        <input type="radio" name="gioitinh" id="dk_nam" value="Nam" checked>
+                        <label for="dk_nam">Nam</label>
+                        <input type="radio" name="gioitinh" id="dk_nu" value="Nữ">
+                        <label for="dk_nu">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Sở thích:</td>
+                    <td>
+                        <input type="checkbox" name="sothich" id="st_xemphim" value="xemphim">
+                        <label for="st_xemphim">Xem phim</label><br>
+                        <input type="checkbox" name="sothich" id="st_nghenhac" value="nghenhac">
+                        <label for="st_nghenhac">Nghe nhạc</label><br>
+                        <input type="checkbox" name="sothich" id="st_docsach" value="docsach">
+                        <label for="st_docsach">Đọc sách</label><br>
+                        <input type="checkbox" name="sothich" id="st_dulich" value="dulich">
+                        <label for="st_dulich">Du lịch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Giới thiệu bản thân:</td>
+                    <td>
+                        <textarea name="gioithieu" rows="5" cols="35" placeholder="Chia sẻ đôi điều về bản thân..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="reset" value="Cancel">
+                        <input type="submit" value="Đăng ký">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- BÀI TẬP 4: THAMDOYKIEN -->
+    <div class="section-box" id="form4">
+        <h2>BÀI TẬP 4: TRANG THAMDOYKIEN.HTML</h2>
+        <h3>PHIẾU THĂM DÒ Ý KIẾN</h3>
+        <form action="" method="post">
+            <table class="form-table">
+                <tr>
+                    <td class="label-col">Tên đăng nhập:</td>
+                    <td>
+                        <input type="text" name="username" size="30" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Giới tính:</td>
+                    <td>
+                        <input type="radio" name="gioitinh" id="td_nam" value="Nam" checked>
+                        <label for="td_nam">Nam</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" name="gioitinh" id="td_nu" value="Nữ">
+                        <label for="td_nu">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Những mục quan tâm trên Internet:</td>
+                    <td>
+                        <input type="checkbox" name="quantam" id="qt_tintuc" value="tintuc">
+                        <label for="qt_tintuc">Tin tức</label><br>
+                        <input type="checkbox" name="quantam" id="qt_giaitri" value="giaitri">
+                        <label for="qt_giaitri">Giải trí</label><br>
+                        <input type="checkbox" name="quantam" id="qt_hoctap" value="hoctap">
+                        <label for="qt_hoctap">Góc học tập</label><br>
+                        <input type="checkbox" name="quantam" id="qt_giaoduc" value="giaoduc">
+                        <label for="qt_giaoduc">Giáo dục</label><br>
+                        <input type="checkbox" name="quantam" id="qt_khac" value="khac">
+                        <label for="qt_khac">Các mục khác:</label>
+                        <input type="text" name="quantam_khac" size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Gửi đi">
+                        <input type="reset" value="Cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- BÀI TẬP 5: DANGKY (THÔNG TIN THÀNH VIÊN) -->
+    <div class="section-box" id="form5">
+        <h2>BÀI TẬP 5: TRANG DANGKY.HTML (THÔNG TIN THÀNH VIÊN)</h2>
+        <h3 align="center">PHIẾU ĐĂNG KÝ</h3>
+        <form action="" method="post">
+            <table class="form-table" align="center">
+                <tr>
+                    <td class="label-col">Họ và tên:</td>
+                    <td>
+                        <input type="text" name="hoten" size="30" required> <span class="required">(*)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Địa chỉ :</td>
+                    <td>
+                        <input type="text" name="diachi" size="45">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Email :</td>
+                    <td>
+                        <input type="email" name="email" size="30" required> <span class="required">(*)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Giới tính :</td>
+                    <td>
+                        <input type="radio" name="gioitinh" id="mem_nam" value="Nam" checked>
+                        <label for="mem_nam">Nam</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" name="gioitinh" id="mem_nu" value="Nữ">
+                        <label for="mem_nu">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Tuổi :</td>
+                    <td>
+                        <input type="text" name="tuoi" size="5" required> <span class="required">(*)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Sở thích :</td>
+                    <td>
+                        <input type="checkbox" name="sothich" id="st_tt" value="thethao">
+                        <label for="st_tt">Thể thao</label><br>
+                        <input type="checkbox" name="sothich" id="st_vh" value="vanhoc">
+                        <label for="st_vh">Văn học</label><br>
+                        <input type="checkbox" name="sothich" id="st_cntt" value="cntt">
+                        <label for="st_cntt">Công nghệ thông tin</label><br>
+                        <input type="checkbox" name="sothich" id="st_ls" value="lichsu">
+                        <label for="st_ls">Lịch sử</label><br>
+                        <input type="checkbox" name="sothich" id="st_game" value="game">
+                        <label for="st_game">Game</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Chuyên ngành:</td>
+                    <td>
+                        <select name="chuyennganh">
+                            <option value="web" selected>Công nghệ Web</option>
+                            <option value="pm">Công nghệ phần mềm</option>
+                            <option value="httt">Hệ thống thông tin</option>
+                            <option value="mmt">Mạng máy tính</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Gởi hình:</td>
+                    <td>
+                        <input type="file" name="hinh">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Yêu cầu:</td>
+                    <td>
+                        <textarea name="yeucau" rows="4" cols="35"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Gởi thông tin">
+                        <input type="reset" value="Nhập lại">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- BÀI TẬP 6: ĐĂNG KÝ MUA HOA -->
+    <div class="section-box" id="form6">
+        <h2>BÀI TẬP 6: ĐĂNG KÝ MUA HOA</h2>
+        <h3 align="center">ĐĂNG KÝ MUA HOA</h3>
+        <p class="notice-red" align="center">
+            Quý độc giả hãy điền đầy đủ các thông tin theo yêu cầu để nhận được sản phẩm hoa, cây cảnh ưa thích nhất
+        </p>
+
+        <form action="" method="post">
+            <table class="form-table" align="center">
+                <tr>
+                    <td class="label-col">Họ và tên:</td>
+                    <td>
+                        <input type="text" name="hoten" size="30" required> <span class="required">(*)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Địa chỉ:</td>
+                    <td>
+                        <input type="text" name="diachi" size="45" required> <span class="required">(*)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Điện thoại:</td>
+                    <td>
+                        <input type="tel" name="dienthoai" size="20" required> <span class="required">(*)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Email:</td>
+                    <td>
+                        <input type="email" name="email" size="30" required> <span class="required">(*)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Loại hoa:</td>
+                    <td>
+                        <select name="loaihoa">
+                            <option value="hoahong" selected>Hoa Hồng</option>
+                            <option value="hoalan">Hoa Lan</option>
+                            <option value="hoacuc">Hoa Cúc</option>
+                            <option value="hoaly">Hoa Ly</option>
+                            <option value="huongduong">Hoa Hướng Dương</option>
+                            <option value="hoasen">Hoa Sen</option>
+                        </select>
+                        &nbsp;&nbsp;
+                        <strong>Màu</strong>
+                        &nbsp;
+                        <select name="mauhoa">
+                            <option value="do" selected>Đỏ</option>
+                            <option value="trang">Trắng</option>
+                            <option value="vang">Vàng</option>
+                            <option value="hong">Hồng</option>
+                            <option value="tim">Tím</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Số lượng:</td>
+                    <td>
+                        <input type="number" name="soluong" min="1" size="5" value="1" required> <span class="required">(*)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Đơn vị tính:</td>
+                    <td>
+                        <input type="radio" name="donvitinh" id="dvt_nhanh" value="Nhánh" checked>
+                        <label for="dvt_nhanh">Nhánh</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" name="donvitinh" id="dvt_bo" value="Bó">
+                        <label for="dvt_bo">Bó</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" name="donvitinh" id="dvt_chau" value="Chậu">
+                        <label for="dvt_chau">Chậu</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Thanh toán:</td>
+                    <td>
+                        <input type="radio" name="thanhtoan" id="tt_tienmat" value="Tiền mặt" checked>
+                        <label for="tt_tienmat">Tiền mặt</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" name="thanhtoan" id="tt_chuyenkhoan" value="Chuyển khoản">
+                        <label for="tt_chuyenkhoan">Chuyển khoản</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" name="thanhtoan" id="tt_mastercard" value="Master card">
+                        <label for="tt_mastercard">Master card</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Yêu cầu:</td>
+                    <td>
+                        <textarea name="yeucau" rows="4" cols="42" placeholder="Yêu cầu cụ thể về đơn hàng..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Đăng ký">
+                        <input type="reset" value="Nhập lại">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+
+</html>
