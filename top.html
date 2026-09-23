@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top menu</title>
+    <style>
+        .top-menu-bar {
+            background-color: #555;
+            display: inline-block;
+            border: 2px solid #333;
+        }
+
+        .top-menu-table {
+            border-collapse: collapse;
+        }
+
+        .top-menu-table td {
+            border-right: 1px solid #777;
+            padding: 10px 18px;
+            text-align: center;
+        }
+
+        .top-menu-table td:last-child {
+            border-right: none;
+        }
+
+        .top-menu-table a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .top-menu-table a:hover {
+            color: #ffeb3b;
+        }
+
+        .top-menu-table .active a {
+            color: #d1c4e9;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>BÀI 2: TOP MENU</h2>
+
+    <div class="top-menu-bar">
+        <table class="top-menu-table">
+            <tr>
+                <td><a href="index.html">TRANG CHỦ</a></td>
+                <td><a href="#">GIỚI THIỆU</a></td>
+                <td><a href="#">KHUYẾN MÃI</a></td>
+                <td class="active"><a href="sanpham.html">SẢN PHẨM</a></td>
+                <td><a href="#">TIN TỨC</a></td>
+                <td><a href="#">BẢO HÀNH</a></td>
+                <td><a href="#">DOWNLOAD</a></td>
+                <td><a href="#">LIÊN HỆ</a></td>
+                <td><a href="#">TUYỂN DỤNG</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <br><br>
+    <a href="index.html">Quay về trang chủ</a>
+
+</body>
+
+</html>

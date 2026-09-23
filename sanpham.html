@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>danh sách điện thoại</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px 40px;
+        }
+
+        .phone-table {
+            border-collapse: collapse;
+            border: 2px solid #333;
+        }
+
+        .phone-table td {
+            border: 2px solid #555;
+            padding: 15px 20px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #fafafa;
+        }
+
+        .phone-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .phone-img {
+            max-width: 170px;
+            max-height: 230px;
+            object-fit: contain;
+        }
+
+        .phone-title {
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        .phone-desc {
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>BÀI 3: DANH SÁCH ĐIỆN THOẠI</h2>
+    <h3>Những dòng điện thoại hiện có</h3>
+
+    <table class="phone-table" border="1">
+        <tr>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_17_promax.png" alt="iPhone 17 Pro Max" class="phone-img">
+                    <div class="phone-title">iPhone 17 Pro Max</div>
+                    <div class="phone-desc">Titanium Tự Nhiên - Chip A19 Pro</div>
+                </div>
+            </td>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_17_pro.png" alt="iPhone 17 Pro" class="phone-img">
+                    <div class="phone-title">iPhone 17 Pro</div>
+                    <div class="phone-desc">Desert Titanium - Camera 48MP</div>
+                </div>
+            </td>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_17.png" alt="iPhone 17" class="phone-img">
+                    <div class="phone-title">iPhone 17</div>
+                    <div class="phone-desc">Ultramarine Blue - Dynamic Island</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_17_air.png" alt="iPhone 17 Air" class="phone-img">
+                    <div class="phone-title">iPhone 17 Air (Slim)</div>
+                    <div class="phone-desc">Siêu mỏng 5.5mm - Titanium Frame</div>
+                </div>
+            </td>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_18_promax.png" alt="iPhone 18 Pro Max" class="phone-img">
+                    <div class="phone-title">iPhone 18 Pro Max</div>
+                    <div class="phone-desc">Space Black - Chip A20 Pro 2nm</div>
+                </div>
+            </td>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_18_pro.png" alt="iPhone 18 Pro" class="phone-img">
+                    <div class="phone-title">iPhone 18 Pro</div>
+                    <div class="phone-desc">Emerald Titanium - Quad Camera</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_18.png" alt="iPhone 18" class="phone-img">
+                    <div class="phone-title">iPhone 18</div>
+                    <div class="phone-desc">Lavender Violet - Màn hình tràn viền</div>
+                </div>
+            </td>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_duo_fold.png" alt="iPhone Duo Fold" class="phone-img">
+                    <div class="phone-title">iPhone Duo (Fold)</div>
+                    <div class="phone-desc">Màn hình kép gập sách OLED 8.1"</div>
+                </div>
+            </td>
+            <td>
+                <div class="phone-card">
+                    <img src="images/iphone_duo_flip.png" alt="iPhone Duo Flip" class="phone-img">
+                    <div class="phone-title">iPhone Duo (Flip)</div>
+                    <div class="phone-desc">Màn hình gập vỏ sò nhỏ gọn</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+    <a href="index.html">Quay về trang chủ</a>
+
+</body>
+
+</html>
