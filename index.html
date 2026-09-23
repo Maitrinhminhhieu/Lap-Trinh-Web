@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập HTML: Bài 4, Bài 5 & Registration Form</title>
+</head>
+
+<body>
+
+    <!-- BÀI 4: KẾT QUẢ HỌC TẬP -->
+    <h2>BÀI 4: BẢNG ĐIỂM KẾT QUẢ HỌC TẬP</h2>
+
+    <table border="1">
+        <tr>
+            <th colspan="5">KẾT QUẢ HỌC TẬP</th>
+        </tr>
+
+        <tr>
+            <th rowspan="2">Họ và tên HS</th>
+            <th colspan="2">Năm Sinh</th>
+            <th rowspan="2">Điểm TB</th>
+            <th rowspan="2">Xếp Loại</th>
+        </tr>
+
+        <tr>
+            <th>Nam</th>
+            <th>Nữ</th>
+        </tr>
+
+        <tr>
+            <td>Lê Thanh Xuân</td>
+            <td></td>
+            <td align="center">1988</td>
+            <td align="center">8.5</td>
+            <td align="center">Giỏi</td>
+        </tr>
+
+        <tr>
+            <td>Phan Thế Hạ</td>
+            <td align="center">1990</td>
+            <td></td>
+            <td align="center">6.5</td>
+            <td align="center">Khá</td>
+        </tr>
+
+        <tr>
+            <td>Trần Hoài Thu</td>
+            <td></td>
+            <td align="center">1991</td>
+            <td align="center">9.5</td>
+            <td align="center">Xuất Sắc</td>
+        </tr>
+
+        <tr>
+            <td>Trương Lưu Đông</td>
+            <td align="center">1989</td>
+            <td></td>
+            <td align="center">6.0</td>
+            <td align="center">Trung Bình</td>
+        </tr>
+
+        <tr>
+            <td>Nguyễn Trung Trực</td>
+            <td align="center">1988</td>
+            <td></td>
+            <td align="center">4.5</td>
+            <td align="center">Kém</td>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="center">Tổng số học sinh đạt:</td>
+            <td colspan="2" align="center">4 Học sinh</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <hr>
+    <br>
+
+    <!-- BÀI 5: PHIẾU ĐĂNG KÝ -->
+    <h2>BÀI 5: PHIẾU ĐĂNG KÝ</h2>
+
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td align="right">Họ và tên:</td>
+                <td>
+                    <input type="text" name="hoten" required> (*)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Địa chỉ :</td>
+                <td>
+                    <input type="text" name="diachi" size="40">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Email :</td>
+                <td>
+                    <input type="email" name="email" required> (*)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Giới tính :</td>
+                <td>
+                    <input type="radio" name="gioitinh" id="nam" value="Nam" checked> <label for="nam">Nam</label>
+                    <input type="radio" name="gioitinh" id="nu" value="Nữ"> <label for="nu">Nữ</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Tuổi :</td>
+                <td>
+                    <input type="text" name="tuoi" size="5" required> (*)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" valign="top">Sở thích :</td>
+                <td>
+                    <input type="checkbox" name="sothich" id="thethao" value="thethao"> <label for="thethao">Thể thao</label><br>
+                    <input type="checkbox" name="sothich" id="vanhoc" value="vanhoc"> <label for="vanhoc">Văn học</label><br>
+                    <input type="checkbox" name="sothich" id="cntt" value="cntt"> <label for="cntt">Công nghệ thông tin</label><br>
+                    <input type="checkbox" name="sothich" id="lichsu" value="lichsu"> <label for="lichsu">Lịch sử</label><br>
+                    <input type="checkbox" name="sothich" id="game" value="game"> <label for="game">Game</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Chuyên ngành:</td>
+                <td>
+                    <select name="chuyennganh">
+                        <option value="web">Công nghệ Web</option>
+                        <option value="pm">Công nghệ phần mềm</option>
+                        <option value="httt">Hệ thống thông tin</option>
+                        <option value="mmt">Mạng máy tính</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Gởi hình:</td>
+                <td>
+                    <input type="file" name="hinh">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" valign="top">Yêu cầu:</td>
+                <td>
+                    <textarea name="yeucau" rows="4" cols="35"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Gởi thông tin">
+                    <input type="reset" value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <br><br>
+    <hr>
+    <br>
+
+    <!-- FORM ĐĂNG KÝ BỔ SUNG (REGISTRATION FORM) -->
+    <h2>Registration Form</h2>
+
+    <form action="" method="post">
+        First Name : <input type="text" name="firstname" placeholder="Enter First Name"><br>
+        Last Name : <input type="text" name="lastname" placeholder="Enter Last Name"><br>
+        Email : <input type="email" name="email" placeholder="Enter Email Address"><br>
+        Password : <input type="password" name="password"><br>
+        Gender:<br>
+        Male <input type="radio" name="gender" value="male"><br>
+        Female <input type="radio" name="gender" value="female"><br>
+        Other <input type="radio" name="gender" value="other"><br>
+        Age : <input type="number" name="age"><br>
+        Preferences :<br>
+        Acrylic Painting <input type="checkbox" name="preferences" value="acrylic"><br>
+        Oil Painting <input type="checkbox" name="preferences" value="oil"><br>
+        Water Color Painting <input type="checkbox" name="preferences" value="watercolor"><br>
+        Select Occupation 
+        <select name="occupation">
+            <option value="student" selected>Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="engineer">Engineer</option>
+            <option value="other">Other</option>
+        </select><br>
+        Bio <textarea name="bio" rows="6" cols="30" placeholder="Share few lines about yourself..."></textarea><br>
+        <input type="reset" value="RESET">
+        <input type="submit" value="SUBMIT">
+    </form>
+
+</body>
+
+</html>
